@@ -3,17 +3,18 @@ import React, {useEffect, useState} from 'react';
 import { connect } from 'react-redux';
 import TaskItem from './TaskItem';
 
-const TasksList = ({tasks}) => {
+const TasksList = ({visibleTasks}) => {
+    const data = [...visibleTasks];
     return (
-        tasks.map(i=>{
-            return <TaskItem key = {i.id} task = {i}></TaskItem>
+        data.map(i => {
+            return <TaskItem key = {i.id} taskItem = {i}></TaskItem>
         })
     )
 }
 
 const mapStateToProps = state => {
     return {
-        tasks: state
+        visibleTasks: state.visibleTasks
     }
 }
 

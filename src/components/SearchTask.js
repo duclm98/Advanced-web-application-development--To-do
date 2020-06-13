@@ -17,7 +17,7 @@ const SearchTask = ({dispatch}) => {
     useEffect(()=>{
         dispatch({
             type: 'SEARCH_TASK',
-            payload: search
+            search
         })
     },[search])
 

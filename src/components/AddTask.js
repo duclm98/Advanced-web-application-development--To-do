@@ -14,7 +14,7 @@ const AddTask = ({dispatch}) => {
                 e.preventDefault()
                 dispatch({
                     type: 'ADD_TASK',
-                    payload: task
+                    task
                 })
                 setTask('');
                 document.getElementById('task').value='';
