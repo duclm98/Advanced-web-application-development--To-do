@@ -40,7 +40,7 @@ const reducer = (state = initialState, action) => {
             visibleTasks = state.tasks;
         }
         return {
-            tasks: state.visibleTasks,
+            tasks: state.tasks,
             visibleTasks: [...visibleTasks]
         };
     } else if (action.type === 'MARK_DONE') {
